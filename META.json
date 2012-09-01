@@ -4,7 +4,7 @@
       "Mike Doherty <doherty@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300018, CPAN::Meta::Converter version 2.120630",
+   "generated_by" : "Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -39,7 +39,7 @@
             "Dist::Zilla::Role::BeforeRelease" : "0",
             "Dist::Zilla::Role::Releaser" : "0",
             "File::pushd" : "0",
-            "Google::Code::Upload" : "0",
+            "Google::Code::Upload" : "0.006",
             "Moose" : "0",
             "Moose::Util::TypeConstraints" : "0",
             "Try::Tiny" : "0",
@@ -59,13 +59,15 @@
    },
    "release_status" : "stable",
    "resources" : {
-      "bugtracker" : {},
+      "bugtracker" : {
+         "web" : "https://github.com/doherty/Dist-Zilla-Plugin-UploadToGoogleCode/issues"
+      },
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/doherty/Dist-Zilla-Plugin-UploadToGoogleCode.git",
          "web" : "https://github.com/doherty/Dist-Zilla-Plugin-UploadToGoogleCode"
       }
    },
-   "version" : "0.002"
+   "version" : "0.003"
 }
 

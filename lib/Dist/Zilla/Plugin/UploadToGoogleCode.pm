@@ -2,7 +2,7 @@ package Dist::Zilla::Plugin::UploadToGoogleCode;
 use strict;
 use warnings;
 # ABSTRACT: upload your dist to Google Code (experimental)
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 use Moose;
 with qw(Dist::Zilla::Role::BeforeRelease Dist::Zilla::Role::Releaser);
 
@@ -76,6 +76,7 @@ has uploader => (
     default => sub {
         my ($self) = @_;
         require Google::Code::Upload;
+        Google::Code::Upload->VERSION(0.006);
         return Google::Code::Upload->new(
             project  => $self->project,
             username => $self->username,
@@ -175,7 +176,7 @@ Dist::Zilla::Plugin::UploadToGoogleCode - upload your dist to Google Code (exper
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -237,7 +238,7 @@ and may be cloned from L<git://github.com/doherty/Dist-Zilla-Plugin-UploadToGoog
 =head1 BUGS AND LIMITATIONS
 
 You can make new bug reports, and view existing ones, through the
-web interface at L<http://rt.cpan.org>.
+web interface at L<https://github.com/doherty/Dist-Zilla-Plugin-UploadToGoogleCode/issues>.
 
 =head1 AUTHOR
 
